@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>littlebird</title>
-  <style>
+	<head>
+		<title>littlebird</title>
+		<style>
     body {
       margin: 0;
       padding: 0;
@@ -11,7 +11,7 @@
     }
 
     #container {
-      height: 6000px;
+      height: 6000px; 
     }
 
     .section {
@@ -47,76 +47,69 @@
     }
 
     .background {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100vw;
-      height: 100vh;
-      background-image: url(background.jpg);
-      background-size: cover;
-      background-position: center;
-      z-index: -1;
-      animation: scrollBackground 10s linear infinite;
-    }
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-image: url(background.png);
+  background-size: cover;
+  background-position: center;
+  z-index: -1;
+  animation: scrollBackground 10s linear infinite;
+}
 
     @keyframes scrollBackground {
       0% {
-        background-position: 0 0;
+        transform: translateY(0%);
       }
       100% {
-        background-position: 0 -6000px;
+        transform: translateY(-100%);
       }
     }
   </style>
-</head>
-<body>
-  <div id="container">
-    <div class="section">
+	</head>
+	<body>
+		<div id="container">
+			<div class="section">
+				<div class="background">
+					<img src="background.jpg" alt="Background Image">
+					</div>
       In a land faraway,
-    </div>
-
-    <div class="section">
+    
+				</div>
+				<div class="section">
       There was a little bird,
     </div>
-
-    <div class="section">
+				<div class="section">
       With colorful feathers and a curious mind,
     </div>
-
-    <div class="section">
+				<div class="section">
       It embarked on an exciting adventure,
     </div>
-
-    <div class="section">
+				<div class="section">
       Flying through lush green landscape,
     </div>
-
-    <div class="section">
+				<div class="section">
       Exploring the depths of sparkling rivers,
     </div>
-
-    <div class="section">
+				<div class="section">
       And soaring high above snow-capped mountains.
     </div>
-
-    <div class="section">
+				<div class="section">
       Every new place filled its heart with joy,
     </div>
-
-    <div class="section">
+				<div class="section">
       As it discovered the wonders of the world.
     </div>
-
-    <div class="section">
-      <div class="story-end">
+				<div class="section">
+					<div class="story-end">
         And so, the little bird's adventure continues...
       </div>
-    </div>
-
-    <img class="bird" src="bird.png" alt="Flying Bird">
-  </div>
-
-  <script>
+				</div>
+				<img class="bird" src="bird.png" alt="Flying Bird">
+				</div>
+				<script>
     document.addEventListener("DOMContentLoaded", function() {
       const bird = document.querySelector(".bird");
       const container = document.querySelector("#container");
@@ -151,5 +144,5 @@
       });
     });
   </script>
-</body>
-</html>
+			</body>
+		</html>
