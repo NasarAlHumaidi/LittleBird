@@ -1,0 +1,64 @@
+body {
+	margin: 0;
+	padding: 0;
+	font-family: Arial, sans-serif;
+	overflow-x: hidden;
+}
+
+#container {
+	height: 6000px; 
+}
+
+.section {
+	height: 100vh;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+	font-size: 24px;
+	transition: background-position 1s;
+	position: relative;
+	overflow: hidden;
+}
+
+.bird {
+	position: fixed;
+	top: 50%;
+	left: 0;
+	width: 100px;
+	height: auto;
+	transform: scaleX(-1);
+	z-index: 1;
+	transition: transform 0.2s;
+}
+
+.story-end {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	font-size: 32px;
+	font-weight: bold;
+}
+
+.background {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100vw;
+	height: 100vh;
+	background-image: url(background.jpg);
+	background-size: cover;
+	background-position: center;
+	z-index: -1;
+	animation: scrollBackground 10s linear infinite;
+}
+
+@keyframes scrollBackground {
+	0% {
+		transform: translateY(0%);
+	}
+	100% {
+		transform: translateY(-100%);
+	}
+}
